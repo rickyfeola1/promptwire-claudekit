@@ -785,7 +785,7 @@
 
 <script>
 const API_URL = '/api/subscribe';
-const AUTOMATION_ID = 'aut_ba70446c-092e-4494-b912-5c1e29d361bf';
+const AUTOMATION_ID = 'aut_f21fc8ef-6765-4904-85e9-3196fe29f25a';
 
 async function subscribe(source) {
     const emailId = source === 'hero' ? 'heroEmail' : 'bottomEmail';
@@ -807,11 +807,9 @@ async function subscribe(source) {
     } catch(e) { console.error(e); }
 
     if (source === 'hero') {
-        document.getElementById('formWrap').style.display = 'none';
-        document.getElementById('heroSuccess').style.display = 'block';
+        window.top.location.href = 'https://www.promptwireai.com/recommendations';
     } else {
-        document.getElementById('bottomFormWrap').style.display = 'none';
-        document.getElementById('bottomSuccess').style.display = 'block';
+        window.top.location.href = 'https://www.promptwireai.com/recommendations';
     }
 }
 
