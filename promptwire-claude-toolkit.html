@@ -789,8 +789,10 @@ const AUTOMATION_ID = 'aut_f21fc8ef-6765-4904-85e9-3196fe29f25a';
 
 async function subscribe(source) {
     const emailId = source === 'hero' ? 'heroEmail' : 'bottomEmail';
+    const btnId = source === 'hero' ? 'heroBtn' : 'bottomBtn';
     const email = document.getElementById(emailId).value.trim();
     const input = document.getElementById(emailId);
+    const btn = document.getElementById(btnId);
 
     if (!email || !email.includes('@')) {
         input.classList.add('error');
@@ -798,19 +800,23 @@ async function subscribe(source) {
         return;
     }
 
+    btn.textContent = 'Sending...';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+
+    let eventId = null;
     try {
-        await fetch(API_URL, {
+        const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, automation_id: AUTOMATION_ID })
         });
+        const data = await response.json().catch(() => ({}));
+        if (data.event_id) eventId = data.event_id;
     } catch(e) { console.error(e); }
 
-    if (source === 'hero') {
-        window.top.location.href = 'https://www.promptwireai.com/recommendations';
-    } else {
-        window.top.location.href = 'https://www.promptwireai.com/recommendations';
-    }
+    const eid = eventId ? '?eid=' + eventId + '&src=claude_toolkit' : '?src=claude_toolkit';
+    window.top.location.href = 'https://www.promptwireai.com/recommendations' + eid;
 }
 
 document.getElementById('heroEmail').addEventListener('keypress', e => { if (e.key === 'Enter') subscribe('hero'); });
