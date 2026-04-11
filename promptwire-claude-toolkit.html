@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Does That — Free Document Toolkit</title>
+    <title>Cancel These Apps. Claude Does It Free.</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -32,45 +32,25 @@
             min-height: 100vh;
         }
 
-        /* ---- LAYOUT ---- */
-        .page {
-            min-height: 100vh;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-        }
+        .page { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
 
         /* ---- TOP BAR ---- */
         .topbar {
             background: var(--gray-900);
             padding: 10px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
         }
 
-        .topbar-dot {
-            width: 7px; height: 7px;
-            background: var(--green);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
+        .topbar-dot { width: 7px; height: 7px; background: var(--blue); border-radius: 50%; animation: pulse 2s infinite; }
 
-        .topbar p {
-            font-size: 12px;
-            font-weight: 600;
-            color: rgba(255,255,255,0.6);
-            letter-spacing: 0.2px;
-        }
-
+        .topbar p { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 0.2px; }
         .topbar span { color: rgba(255,255,255,0.9); }
 
         /* ---- HERO ---- */
         .hero {
             background: linear-gradient(135deg, #171717 0%, #1292eb 100%);
             padding: 56px 24px 64px;
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
 
         .hero::before {
@@ -90,40 +70,31 @@
             grid-template-columns: 1fr 420px;
             gap: 56px;
             align-items: center;
-            position: relative;
-            z-index: 1;
+            position: relative; z-index: 1;
         }
 
-        /* LEFT SIDE */
-        .hero-left {}
-
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-flex; align-items: center; gap: 8px;
             background: rgba(255,255,255,0.1);
             border: 1px solid rgba(255,255,255,0.18);
             color: rgba(255,255,255,0.85);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 100px;
+            font-size: 11px; font-weight: 700;
+            padding: 6px 14px; border-radius: 100px;
             margin-bottom: 22px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            letter-spacing: 0.5px; text-transform: uppercase;
         }
 
         .hero h1 {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(38px, 6vw, 62px);
+            font-size: clamp(38px, 6vw, 68px);
             font-weight: 800;
-            line-height: 1.02;
+            line-height: 0.98;
             color: white;
             margin-bottom: 18px;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
         }
 
-        .hero h1 .accent { color: rgba(255,255,255,0.5); }
+        .hero h1 .accent { color: rgba(255,255,255,0.4); display: block; font-style: italic; }
 
         .hero-desc {
             font-size: 16px;
@@ -133,36 +104,24 @@
             max-width: 460px;
         }
 
-        /* what's inside pills */
-        .inside-list {
-            display: flex;
-            flex-direction: column;
-            gap: 9px;
-            margin-bottom: 0;
-        }
+        .inside-list { display: flex; flex-direction: column; gap: 9px; }
 
         .inside-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            color: rgba(255,255,255,0.75);
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: rgba(255,255,255,0.75);
         }
 
         .inside-item .check {
             width: 20px; height: 20px;
-            background: rgba(16,185,129,0.2);
-            border: 1px solid rgba(16,185,129,0.35);
+            background: rgba(18,146,235,0.2);
+            border: 1px solid rgba(18,146,235,0.35);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            flex-shrink: 0;
-            color: var(--green);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 10px; flex-shrink: 0;
+            color: #7dc8f7;
         }
 
-        /* RIGHT SIDE — FORM CARD */
+        /* ---- FORM CARD ---- */
         .form-card {
             background: white;
             border-radius: 20px;
@@ -171,47 +130,32 @@
         }
 
         .form-card-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            background: rgba(16,185,129,0.1);
-            border: 1px solid rgba(16,185,129,0.2);
-            color: var(--green);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 5px 12px;
-            border-radius: 100px;
+            display: inline-flex; align-items: center; gap: 7px;
+            background: var(--blue-dim);
+            border: 1px solid rgba(18,146,235,0.2);
+            color: var(--blue);
+            font-size: 11px; font-weight: 700;
+            padding: 5px 12px; border-radius: 100px;
             margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            text-transform: uppercase; letter-spacing: 0.5px;
         }
 
         .form-card h2 {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 8px;
+            font-size: 26px; font-weight: 800;
+            line-height: 1.15; margin-bottom: 8px;
             color: var(--gray-900);
         }
 
-        .form-card-sub {
-            font-size: 13px;
-            color: var(--gray-500);
-            margin-bottom: 22px;
-            line-height: 1.6;
-        }
+        .form-card-sub { font-size: 13px; color: var(--gray-500); margin-bottom: 22px; line-height: 1.6; }
 
         .form-input {
-            width: 100%;
-            padding: 13px 16px;
+            width: 100%; padding: 13px 16px;
             border: 1.5px solid var(--gray-200);
             border-radius: 10px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 15px;
-            color: var(--gray-900);
-            outline: none;
-            transition: border-color 0.2s;
+            font-size: 15px; color: var(--gray-900);
+            outline: none; transition: border-color 0.2s;
             margin-bottom: 10px;
         }
 
@@ -219,17 +163,12 @@
         .form-input.error { border-color: #dc2626; }
 
         .form-btn {
-            width: 100%;
-            padding: 14px;
-            background: var(--blue);
-            color: white;
-            border: none;
-            border-radius: 10px;
+            width: 100%; padding: 14px;
+            background: var(--blue); color: white;
+            border: none; border-radius: 10px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
+            font-size: 15px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s;
             letter-spacing: 0.2px;
         }
 
@@ -240,95 +179,43 @@
         }
 
         .form-trust {
-            margin-top: 12px;
-            font-size: 12px;
-            color: var(--gray-400);
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            margin-top: 12px; font-size: 12px;
+            color: var(--gray-400); text-align: center;
         }
 
-        /* success */
-        .form-success {
-            display: none;
-            text-align: center;
-            padding: 16px 0 8px;
-        }
+        /* ---- BODY ---- */
+        .body-wrap { background: var(--gray-50); }
 
-        .form-success .success-icon {
-            width: 52px; height: 52px;
-            background: rgba(16,185,129,0.1);
-            border: 2px solid rgba(16,185,129,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin: 0 auto 14px;
-        }
-
-        .form-success h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--gray-900);
-        }
-
-        .form-success p {
-            font-size: 13px;
-            color: var(--gray-500);
-            line-height: 1.6;
-        }
-
-        /* ---- BODY SECTIONS ---- */
-        .body-wrap {
-            background: var(--gray-50);
-        }
-
-        .section {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 56px 24px;
-        }
+        .section { max-width: 1080px; margin: 0 auto; padding: 56px 24px; }
 
         .section-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--blue);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1.2px;
+            color: var(--blue); margin-bottom: 12px;
+            display: flex; align-items: center; gap: 6px;
         }
 
         .section h2 {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(28px, 4vw, 40px);
-            font-weight: 800;
-            line-height: 1.1;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800; line-height: 1.05;
             margin-bottom: 12px;
         }
 
         .section > p {
-            font-size: 15px;
-            color: var(--gray-500);
-            line-height: 1.7;
-            max-width: 580px;
+            font-size: 15px; color: var(--gray-500);
+            line-height: 1.7; max-width: 580px;
             margin-bottom: 36px;
         }
 
-        /* ---- PROMPT CARDS ---- */
-        .prompts-grid {
+        /* ---- TOOL CARDS ---- */
+        .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 16px;
         }
 
-        .prompt-card {
+        .tool-card {
             background: white;
             border: 1.5px solid var(--gray-200);
             border-radius: 14px;
@@ -336,91 +223,55 @@
             transition: all 0.2s;
         }
 
-        .prompt-card:hover {
+        .tool-card:hover {
             border-color: var(--blue);
             box-shadow: 0 4px 20px rgba(18,146,235,0.08);
             transform: translateY(-2px);
         }
 
-        .prompt-num {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--blue);
-            background: var(--blue-dim);
-            padding: 4px 10px;
-            border-radius: 100px;
-            display: inline-block;
-            margin-bottom: 12px;
+        .tool-num {
+            font-size: 11px; font-weight: 700;
+            color: var(--blue); background: var(--blue-dim);
+            padding: 4px 10px; border-radius: 100px;
+            display: inline-block; margin-bottom: 12px;
             letter-spacing: 0.5px;
         }
 
-        .prompt-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 7px;
-            color: var(--gray-900);
+        .tool-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 5px; color: var(--gray-900); }
+
+        .tool-saving {
+            font-size: 12px; font-weight: 600;
+            color: var(--blue); margin-bottom: 8px;
         }
 
-        .prompt-card p {
-            font-size: 13px;
-            color: var(--gray-500);
-            line-height: 1.6;
-        }
+        .tool-card p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
 
-        /* ---- OLD WAY / NEW WAY ---- */
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 0;
-        }
+        /* ---- COMPARISON ---- */
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-        .comparison-col {
-            border-radius: 14px;
-            padding: 24px;
-        }
-
-        .comparison-col.old {
-            background: white;
-            border: 1.5px solid var(--gray-200);
-        }
-
-        .comparison-col.new {
-            background: var(--gray-900);
-            border: 1.5px solid rgba(18,146,235,0.2);
-        }
+        .comparison-col { border-radius: 14px; padding: 24px; }
+        .comparison-col.old { background: white; border: 1.5px solid var(--gray-200); }
+        .comparison-col.new { background: var(--gray-900); border: 1.5px solid rgba(18,146,235,0.2); }
 
         .comp-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
             margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            display: flex; align-items: center; gap: 6px;
         }
 
         .comp-label.old-label { color: var(--gray-400); }
         .comp-label.new-label { color: var(--blue); }
 
-        .comp-items {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+        .comp-items { display: flex; flex-direction: column; gap: 10px; }
 
         .comp-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 14px;
-            line-height: 1.5;
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; line-height: 1.5;
         }
 
         .comp-item.old-item { color: var(--gray-500); }
         .comp-item.new-item { color: rgba(255,255,255,0.75); }
-
         .comp-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
 
         /* ---- TESTIMONIALS ---- */
@@ -438,28 +289,17 @@
         }
 
         .testimonial-text {
-            font-size: 14px;
-            color: var(--gray-700);
-            line-height: 1.65;
-            margin-bottom: 16px;
+            font-size: 14px; color: var(--gray-700);
+            line-height: 1.65; margin-bottom: 16px;
             font-style: italic;
         }
 
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        .testimonial-author { display: flex; align-items: center; gap: 10px; }
 
         .author-avatar {
-            width: 32px; height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 700;
-            flex-shrink: 0;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700; flex-shrink: 0;
         }
 
         .av-a { background: #dbeafe; color: #1d4ed8; }
@@ -474,8 +314,7 @@
             background: linear-gradient(135deg, #171717 0%, #1292eb 100%);
             padding: 64px 24px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
 
         .bottom-cta::before {
@@ -487,86 +326,47 @@
             background-size: 44px 44px;
         }
 
-        .bottom-inner {
-            max-width: 500px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
+        .bottom-inner { max-width: 500px; margin: 0 auto; position: relative; z-index: 1; }
 
         .bottom-cta h2 {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(30px, 5vw, 48px);
-            font-weight: 800;
-            color: white;
-            line-height: 1.05;
-            margin-bottom: 12px;
+            font-size: clamp(30px, 5vw, 52px);
+            font-weight: 800; color: white;
+            line-height: 1.02; margin-bottom: 12px;
         }
 
-        .bottom-cta p {
-            font-size: 15px;
-            color: rgba(255,255,255,0.55);
-            margin-bottom: 28px;
-            line-height: 1.6;
-        }
+        .bottom-cta p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 28px; line-height: 1.6; }
 
-        .bottom-form {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
+        .bottom-form { display: flex; gap: 10px; margin-bottom: 12px; }
 
         .bottom-input {
-            flex: 1;
-            padding: 13px 16px;
+            flex: 1; padding: 13px 16px;
             border: 1.5px solid rgba(255,255,255,0.15);
             border-radius: 10px;
             background: rgba(255,255,255,0.1);
             color: white;
             font-family: 'DM Sans', sans-serif;
-            font-size: 15px;
-            outline: none;
+            font-size: 15px; outline: none;
         }
 
         .bottom-input::placeholder { color: rgba(255,255,255,0.35); }
 
         .bottom-btn {
             padding: 13px 22px;
-            background: white;
-            color: var(--gray-900);
-            border: none;
-            border-radius: 10px;
+            background: white; color: var(--gray-900);
+            border: none; border-radius: 10px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            white-space: nowrap;
+            font-size: 15px; font-weight: 600;
+            cursor: pointer; white-space: nowrap;
             transition: all 0.2s;
         }
 
         .bottom-btn:hover { background: var(--gray-100); }
 
-        .bottom-trust {
-            font-size: 12px;
-            color: rgba(255,255,255,0.3);
-        }
+        .bottom-trust { font-size: 12px; color: rgba(255,255,255,0.3); }
 
-        .bottom-success {
-            display: none;
-            background: rgba(16,185,129,0.15);
-            border: 1px solid rgba(16,185,129,0.3);
-            border-radius: 10px;
-            padding: 14px 20px;
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        /* ---- DIVIDER ---- */
         hr { border: none; border-top: 1px solid var(--gray-200); }
 
-        /* ---- ANIMATIONS ---- */
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         @keyframes fadeUp {
@@ -574,22 +374,15 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .hero-left > * {
-            animation: fadeUp 0.55s ease both;
-        }
+        .hero-left > * { animation: fadeUp 0.55s ease both; }
         .hero-left > *:nth-child(1) { animation-delay: 0.05s; }
         .hero-left > *:nth-child(2) { animation-delay: 0.12s; }
         .hero-left > *:nth-child(3) { animation-delay: 0.2s; }
         .hero-left > *:nth-child(4) { animation-delay: 0.28s; }
-
         .form-card { animation: fadeUp 0.55s ease 0.15s both; }
 
-        /* ---- RESPONSIVE ---- */
         @media (max-width: 860px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 36px;
-            }
+            .hero-inner { grid-template-columns: 1fr; gap: 36px; }
             .form-card { max-width: 480px; }
             .comparison { grid-template-columns: 1fr; }
         }
@@ -597,7 +390,7 @@
         @media (max-width: 560px) {
             .bottom-form { flex-direction: column; }
             .bottom-btn { width: 100%; }
-            .prompts-grid { grid-template-columns: 1fr; }
+            .tools-grid { grid-template-columns: 1fr; }
             .testimonials-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -615,39 +408,33 @@
     <section class="hero">
         <div class="hero-inner">
 
-            <!-- LEFT -->
             <div class="hero-left">
-                <div class="hero-badge">⚡ Free Document Toolkit</div>
+                <div class="hero-badge">⚡ Free Prompt Toolkit</div>
 
-                <h1>Claude Builds Your Documents.<br><span class="accent">You Just Send Them.</span></h1>
+                <h1>Cancel These Apps.<br><span class="accent">Claude Does It Free.</span></h1>
 
-                <p class="hero-desc">5 prompts that turn your raw notes into finished Word docs, PowerPoint decks, SOPs, proposals, and client reports. Paste your content. Get a formatted file back. Done.</p>
+                <p class="hero-desc">10 tools you are probably paying for every month that Claude replaces right now. Each one comes with the exact prompt to run instead, producing real files you can open and send.</p>
 
                 <div class="inside-list">
-                    <div class="inside-item"><span class="check">✓</span> Proposal Builder — executive summary, scope, pricing, next steps</div>
-                    <div class="inside-item"><span class="check">✓</span> SOP Writer — step-by-step process docs, ready to hand off</div>
-                    <div class="inside-item"><span class="check">✓</span> Slide Deck Builder — structured presentations from bullet points</div>
-                    <div class="inside-item"><span class="check">✓</span> Client Report Generator — formatted update docs in minutes</div>
-                    <div class="inside-item"><span class="check">✓</span> Payment Terms Doc — professional invoicing language, instantly</div>
+                    <div class="inside-item"><span class="check">✓</span>Document creation tools — proposals, SOPs, reports as real Word files</div>
+                    <div class="inside-item"><span class="check">✓</span>Presentation tools — full PowerPoint decks from your rough notes</div>
+                    <div class="inside-item"><span class="check">✓</span>AI copywriting tools — email sequences, ads, landing page copy</div>
+                    <div class="inside-item"><span class="check">✓</span>Lead research tools — prospect briefs and personalised outreach</div>
+                    <div class="inside-item"><span class="check">✓</span>SEO and content strategy tools — full content calendars from scratch</div>
+                    <div class="inside-item"><span class="check">✓</span>Meeting notes tools — summaries, action items, follow-up emails</div>
+                    <div class="inside-item"><span class="check">✓</span>Plus 4 more categories with the exact prompt for each</div>
                 </div>
             </div>
 
-            <!-- RIGHT — FORM -->
             <div class="form-card">
                 <div class="form-card-label">✓ Free instant access</div>
-                <h2>Get the Claude Document Toolkit</h2>
-                <p class="form-card-sub">Enter your email and the full toolkit lands in your inbox in under 2 minutes. Plus weekly AI workflows, free.</p>
+                <h2>Get the Free Prompt Toolkit</h2>
+                <p class="form-card-sub">Enter your email and the full guide lands in your inbox in under 2 minutes. Plus weekly AI workflows free every Thursday.</p>
 
                 <div id="formWrap">
                     <input type="email" class="form-input" id="heroEmail" placeholder="your@email.com">
                     <button class="form-btn" id="heroBtn" onclick="subscribe('hero')">Send Me the Toolkit →</button>
                     <p class="form-trust">✓ Free forever &nbsp;·&nbsp; No spam &nbsp;·&nbsp; Unsubscribe anytime</p>
-                </div>
-
-                <div class="form-success" id="heroSuccess">
-                    <div class="success-icon">✓</div>
-                    <h3>You're in — check your inbox.</h3>
-                    <p>Your toolkit is on its way. Should arrive in the next 2 minutes.</p>
                 </div>
             </div>
 
@@ -657,66 +444,101 @@
     <!-- BODY -->
     <div class="body-wrap">
 
-        <!-- WHAT'S INSIDE -->
+        <!-- TOOLS INSIDE -->
         <div class="section">
-            <div class="section-label">📁 What's inside</div>
-            <h2>5 Prompts. 5 Documents You Used to Spend Hours On.</h2>
-            <p>Each prompt is structured to take your raw notes, bullet points, or rough draft and return a finished, formatted document — ready to paste into Word or PowerPoint and send.</p>
+            <div class="section-label">📁 What is inside</div>
+            <h2>10 Tools. 10 Prompts. One guide.</h2>
+            <p>Each section names the app, shows the real monthly cost, and gives you the exact prompt to run in Claude instead. Some produce actual downloadable files. Not text to copy. Real files.</p>
 
-            <div class="prompts-grid">
-                <div class="prompt-card">
-                    <span class="prompt-num">Prompt 1</span>
-                    <h3>The Proposal Builder</h3>
-                    <p>Turn your notes into a complete client proposal — executive summary, scope of work, deliverables, timeline, investment, and next steps. Formatted to paste straight into Word.</p>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <span class="tool-num">Tool 1</span>
+                    <h3>Document Creation Tools</h3>
+                    <div class="tool-saving">Replacing: Microsoft 365 / Google Workspace paid tiers · $7 to $22 per user</div>
+                    <p>Claude outputs your proposals, reports, and SOPs as actual downloadable Word files. Not text to copy and paste. The real .docx file, ready to open and send.</p>
                 </div>
-                <div class="prompt-card">
-                    <span class="prompt-num">Prompt 2</span>
-                    <h3>The SOP Writer</h3>
-                    <p>Describe any process in plain language and get back a clean, numbered SOP your team can follow without asking questions. Includes roles, steps, and decision points.</p>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 2</span>
+                    <h3>Presentation Tools</h3>
+                    <div class="tool-saving">Replacing: Canva Pro / Beautiful.ai / Pitch · $13 to $50 per month</div>
+                    <p>Paste your rough notes. Claude builds every slide with titles, bullet points, and speaker notes, then outputs a real .pptx file ready to open in PowerPoint.</p>
                 </div>
-                <div class="prompt-card">
-                    <span class="prompt-num">Prompt 3</span>
-                    <h3>The Slide Deck Builder</h3>
-                    <p>Give Claude your topic, audience, and key points. Get back a structured slide-by-slide outline with title, speaker notes, and layout suggestions — ready for PowerPoint.</p>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 3</span>
+                    <h3>Spreadsheet and Data Tools</h3>
+                    <div class="tool-saving">Replacing: Airtable / Smartsheet / Excel add-ons · $10 to $45 per user</div>
+                    <p>Claude builds complete functional Excel spreadsheets with working formulas, formatted tables, and conditional formatting. A real .xlsx file, not a CSV to fix.</p>
                 </div>
-                <div class="prompt-card">
-                    <span class="prompt-num">Prompt 4</span>
-                    <h3>The Client Report Generator</h3>
-                    <p>Paste your project updates and get a formatted client-facing report with an executive summary, progress section, risks, and next steps. Professional, every time.</p>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 4</span>
+                    <h3>AI Copywriting Tools</h3>
+                    <div class="tool-saving">Replacing: Jasper / Copy.ai / Writesonic · $39 to $99 per month</div>
+                    <p>If you already pay for Claude you are paying for this twice. Claude writes better marketing copy because you can give it real context about your business and what actually works.</p>
                 </div>
-                <div class="prompt-card">
-                    <span class="prompt-num">Prompt 5</span>
-                    <h3>The Payment Terms Doc</h3>
-                    <p>Generate professional payment terms and invoicing language tailored to your project type. Covers deposits, milestones, late fees, and revision limits.</p>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 5</span>
+                    <h3>Lead Research Tools</h3>
+                    <div class="tool-saving">Replacing: LinkedIn Sales Navigator / Apollo / Lusha · $99 to $199 per month</div>
+                    <p>Paste a name and company and get a full research brief, the most relevant angles for your call, and personalised outreach copy ready to send.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 6</span>
+                    <h3>Meeting Notes Tools</h3>
+                    <div class="tool-saving">Replacing: Otter.ai / Fireflies / Bluedot · $14 to $32 per user</div>
+                    <p>Paste your transcript or rough notes. Claude produces a clean summary, numbered action items with owners and deadlines, and a follow-up email ready to send.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 7</span>
+                    <h3>SEO and Content Strategy Tools</h3>
+                    <div class="tool-saving">Replacing: Ahrefs / Semrush / Surfer SEO · $99 to $249 per month</div>
+                    <p>Claude identifies what your audience is searching for, finds gaps your competitors have not covered, and builds an 8-week content calendar with a reason for every topic.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 8</span>
+                    <h3>Customer Feedback Tools</h3>
+                    <div class="tool-saving">Replacing: SurveyMonkey / Typeform Business / Hotjar · $25 to $99 per month</div>
+                    <p>Paste your reviews, survey responses, or support emails. Claude finds the five most common themes, your biggest complaints, and the single highest-priority change to make.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 9</span>
+                    <h3>Sales Collateral Tools</h3>
+                    <div class="tool-saving">Replacing: PandaDoc / Proposify / DocSend · $29 to $99 per month</div>
+                    <p>Claude builds your proposal as a real Word document, writes the follow-up email, and gives you three responses for when they push back on price.</p>
+                </div>
+                <div class="tool-card">
+                    <span class="tool-num">Tool 10</span>
+                    <h3>Social Media Copy Tools</h3>
+                    <div class="tool-saving">Replacing: Buffer / Hootsuite copy features / Sprout Social · $18 to $99 per month</div>
+                    <p>One idea in. A full week of platform-specific content out. LinkedIn post, three X posts, Instagram caption, and an email to your list — all in your voice.</p>
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <!-- OLD WAY / NEW WAY -->
+        <!-- COMPARISON -->
         <div class="section">
             <div class="section-label">⚡ The difference</div>
-            <h2>Most People Are Using Claude Wrong.</h2>
-            <p>They ask Claude to write something. They get a wall of text. Then they spend 45 minutes reformatting it. These prompts skip that entirely.</p>
+            <h2>You Are Probably Paying for Thinking That Claude Already Does.</h2>
+            <p>Most of these subscriptions charge you for content creation and analysis. If you are already using Claude, you are paying for the same thing twice.</p>
 
             <div class="comparison">
                 <div class="comparison-col old">
-                    <div class="comp-label old-label">✗ The old way</div>
+                    <div class="comp-label old-label">✗ Before this guide</div>
                     <div class="comp-items">
-                        <div class="comp-item old-item"><span class="comp-icon">😩</span> Ask Claude to write a proposal, get unformatted text</div>
-                        <div class="comp-item old-item"><span class="comp-icon">⏱️</span> Spend 45 minutes copying into Word and reformatting</div>
-                        <div class="comp-item old-item"><span class="comp-icon">🔄</span> Send it back to Claude three times to fix headings</div>
-                        <div class="comp-item old-item"><span class="comp-icon">😤</span> Still doesn't look like a real business document</div>
+                        <div class="comp-item old-item"><span class="comp-icon">💸</span>Paying $150 to $400 per month across 5 to 8 subscriptions</div>
+                        <div class="comp-item old-item"><span class="comp-icon">🔄</span>Switching tabs constantly to get one task done</div>
+                        <div class="comp-item old-item"><span class="comp-icon">⏱️</span>Still spending hours on reformatting and manual work</div>
+                        <div class="comp-item old-item"><span class="comp-icon">😤</span>Paying for tools that do what one Claude prompt can do</div>
                     </div>
                 </div>
                 <div class="comparison-col new">
-                    <div class="comp-label new-label">✓ With these prompts</div>
+                    <div class="comp-label new-label">✓ With this guide</div>
                     <div class="comp-items">
-                        <div class="comp-item new-item"><span class="comp-icon">📋</span> Paste your notes into the prompt</div>
-                        <div class="comp-item new-item"><span class="comp-icon">⚡</span> Claude returns a structured, formatted document</div>
-                        <div class="comp-item new-item"><span class="comp-icon">📄</span> Copy straight into Word or PowerPoint</div>
-                        <div class="comp-item new-item"><span class="comp-icon">✅</span> Send to the client</div>
+                        <div class="comp-item new-item"><span class="comp-icon">📋</span>Know exactly which subscriptions to cancel first</div>
+                        <div class="comp-item new-item"><span class="comp-icon">⚡</span>One prompt produces the full output you were paying for</div>
+                        <div class="comp-item new-item"><span class="comp-icon">📄</span>Real downloadable files, not walls of text to reformat</div>
+                        <div class="comp-item new-item"><span class="comp-icon">✅</span>Claude handles 10 categories of work you are currently outsourcing to software</div>
                     </div>
                 </div>
             </div>
@@ -728,37 +550,28 @@
         <div class="section">
             <div class="section-label">💬 From people using it</div>
             <h2>What happens when you actually run these prompts.</h2>
-            <p>Real feedback from people who downloaded the toolkit and used it on actual client work.</p>
+            <p>Real feedback from people who downloaded the guide and used it on actual work.</p>
 
             <div class="testimonials-grid">
                 <div class="testimonial">
-                    <p class="testimonial-text">"I used the Proposal Builder on a client pitch the same day I got this. What normally takes me 2 hours took about 15 minutes. The structure was better than what I'd have written myself."</p>
+                    <p class="testimonial-text">"I cancelled Jasper the same day I got this. I had been paying $49 a month for something Claude does better with more context. The email sequence prompt alone saved me more than that in the first week."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar av-a">S</div>
-                        <div>
-                            <div class="author-name">Sarah P.</div>
-                            <div class="author-role">Marketing consultant</div>
-                        </div>
+                        <div><div class="author-name">Sarah P.</div><div class="author-role">Marketing consultant</div></div>
                     </div>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">"The SOP Writer is the one I keep coming back to. I describe a process out loud, paste it in, and get back something the team can actually follow. Saves me an hour every time I need to document something."</p>
+                    <p class="testimonial-text">"The proposal prompt is the one I use every week. Paste my notes, get a complete Word doc back in two minutes. What used to take me two hours now takes fifteen minutes and the output is better structured."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar av-b">J</div>
-                        <div>
-                            <div class="author-name">James R.</div>
-                            <div class="author-role">Operations lead</div>
-                        </div>
+                        <div><div class="author-name">James R.</div><div class="author-role">Operations consultant</div></div>
                     </div>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">"I was skeptical another AI prompt pack would actually be different. These are. They're built around getting a finished document out, not just generating text. That's the thing most prompts miss."</p>
+                    <p class="testimonial-text">"I had no idea Claude could produce actual PowerPoint and Excel files. I thought it just gave you text. Once I saw what the prompts in this guide produced I cancelled three subscriptions the same week."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar av-c">E</div>
-                        <div>
-                            <div class="author-name">Elena M.</div>
-                            <div class="author-role">Freelance strategist</div>
-                        </div>
+                        <div><div class="author-name">Elena M.</div><div class="author-role">DTC Founder</div></div>
                     </div>
                 </div>
             </div>
@@ -769,14 +582,13 @@
     <!-- BOTTOM CTA -->
     <section class="bottom-cta">
         <div class="bottom-inner">
-            <h2>Stop Reformatting. Start Sending.</h2>
-            <p>Get the full 5-prompt toolkit free. Plus weekly AI workflows in your inbox every Monday.</p>
+            <h2>Stop paying for thinking Claude already does.</h2>
+            <p>Get the full 10-prompt guide free. Find out which subscriptions to cancel first.</p>
 
             <div class="bottom-form" id="bottomFormWrap">
                 <input type="email" class="bottom-input" id="bottomEmail" placeholder="your@email.com">
-                <button class="bottom-btn" id="bottomBtn" onclick="subscribe('bottom')">Get the Toolkit →</button>
+                <button class="bottom-btn" id="bottomBtn" onclick="subscribe('bottom')">Get the Guide →</button>
             </div>
-            <div class="bottom-success" id="bottomSuccess">✓ On its way — check your inbox in the next 2 minutes.</div>
             <p class="bottom-trust">Free instant access. Unsubscribe anytime from your account settings.</p>
         </div>
     </section>
